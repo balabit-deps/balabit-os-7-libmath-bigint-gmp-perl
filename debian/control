@@ -1,0 +1,30 @@
+Source: libmath-bigint-gmp-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Laurent Fousse <laurent@komite.net>,
+           gregor herrmann <gregoa@debian.org>,
+           Alessandro Ghedini <ghedo@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 9.20120312~),
+               libgmp-dev,
+               libmath-bigint-perl (>= 1.999808),
+               libtest-pod-coverage-perl,
+               libtest-pod-perl,
+               libyaml-perl,
+               perl
+Standards-Version: 4.0.0
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libmath-bigint-gmp-perl.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-perl/packages/libmath-bigint-gmp-perl.git
+Homepage: https://metacpan.org/release/Math-BigInt-GMP
+
+Package: libmath-bigint-gmp-perl
+Architecture: any
+Depends: ${perl:Depends},
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libmath-bigint-perl (>= 1.999808)
+Description: module for arbitrary precision arithmetic using GMP
+ Math::BigInt::GMP is a Perl module that uses direct bindings to the GNU
+ Multiple Precision Arithmetic Library (also known as GMP) to provide a
+ high-performance drop-in replacement for Math::BigInt.
